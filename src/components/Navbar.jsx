@@ -4,11 +4,11 @@ const Navbar = () => {
   let nav = useNavigate();
   let location = useLocation();
   return (
-    <div className="h-14 w-[100%] bg-black rounded text-white flex items-center px-5">
-      <div className="border border-green-500">
+    <div className="h-14 w-[100%] bg-black rounded text-white flex justify-between items-center px-5">
+      <div>
         <h2>News Reporter</h2>
       </div>
-      <div className="flex gap-10 border border-red-500">
+      <div className="flex gap-10">
         <span
           onClick={() => nav("/")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
@@ -44,7 +44,7 @@ const Navbar = () => {
         <span
           onClick={() => nav("/city")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
-            location.pathname === "/city" && "text-red-500"
+            location.pathname === "/bussiness" && "text-red-500"
           }`}
         >
           City
