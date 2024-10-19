@@ -1,51 +1,37 @@
-import Navbar from "./components/Navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./screens/Home";
 import Sports from "./screens/Sports";
 import Entertainment from "./screens/Entertainment";
 import Bussiness from "./screens/Bussiness";
-import City from "./screens/City";
+import LandingPage from "./screens/LandingPage";
+import Health from "./screens/Health";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <Navbar /> <Home />
-      </>
-    ),
-  },
-  {
-    path: "/sports",
-    element: (
-      <>
-        <Navbar /> <Sports />
-      </>
-    ),
-  },
-  {
-    path: "/entertainment",
-    element: (
-      <>
-        <Navbar /> <Entertainment />
-      </>
-    ),
-  },
-  {
-    path: "/bussiness",
-    element: (
-      <>
-        <Navbar /> <Bussiness />
-      </>
-    ),
-  },
-  {
-    path: "/city",
-    element: (
-      <>
-        <Navbar /> <City />
-      </>
-    ),
+    element: <LandingPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/sports",
+        element: <Sports />,
+      },
+      {
+        path: "/entertainment",
+        element: <Entertainment />,
+      },
+      {
+        path: "/bussiness",
+        element: <Bussiness />,
+      },
+      {
+        path: "/health",
+        element: <Health />,
+      },
+    ],
   },
 ]);
 

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 
-const Entertainment = () => {
+const Health = () => {
   const apiKey = "0a11b709d5434cb48d2c9b6a68b7da2c";
 
   let [newsData, setNewsData] = useState();
@@ -14,7 +14,7 @@ const Entertainment = () => {
   async function fetchNews() {
     try {
       let data = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=${apiKey}`
+        `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`
       );
       setNewsData(data.data.articles);
 
@@ -36,4 +36,4 @@ const Entertainment = () => {
   );
 };
 
-export default Entertainment;
+export default Health;

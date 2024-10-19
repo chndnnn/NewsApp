@@ -12,7 +12,7 @@ const Navbar = () => {
         <span
           onClick={() => nav("/")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
-            location.pathname === "/" && "text-red-500"
+            location.pathname === "/" && "text-red-500 font-bold"
           }`}
         >
           Home
@@ -20,7 +20,7 @@ const Navbar = () => {
         <span
           onClick={() => nav("/sports")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
-            location.pathname === "/sports" && "text-red-500"
+            location.pathname === "/sports" && "text-red-500 font-bold"
           }`}
         >
           Sports
@@ -28,7 +28,7 @@ const Navbar = () => {
         <span
           onClick={() => nav("/entertainment")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
-            location.pathname === "/entertainment" && "text-red-500"
+            location.pathname === "/entertainment" && "text-red-500 font-bold"
           }`}
         >
           Entertainment
@@ -36,18 +36,18 @@ const Navbar = () => {
         <span
           onClick={() => nav("/bussiness")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
-            location.pathname === "/bussiness" && "text-red-500"
+            location.pathname === "/bussiness" && "text-red-500 font-bold"
           }`}
         >
           Bussiness
         </span>
         <span
-          onClick={() => nav("/city")}
+          onClick={() => nav("/health")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
-            location.pathname === "/bussiness" && "text-red-500"
+            location.pathname === "/health" && "text-red-500 font-bold"
           }`}
         >
-          City
+          Health
         </span>
       </div>
     </div>
