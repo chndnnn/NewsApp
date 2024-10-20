@@ -9,12 +9,20 @@ const Home = () => {
   //   fetchNews();
   // }, []);
 
-  const { data } = useQuery({
+  const { data, isPending, isError } = useQuery({
     queryKey: ["Home"],
     queryFn: () => fetchNews(),
     gcTime: 7200000,
     staleTime: 7200000,
   });
+
+  if (isPending) {
+    return <h2>Loading...</h2>;
+  }
+
+  if (isError) {
+    return <h2>Something went wrong</h2>;
+  }
 
   // async function fetchNews() {
   //   try {
