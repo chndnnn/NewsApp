@@ -1,4 +1,5 @@
 import axios from "axios";
+// import data from "./test.json";
 
 export async function fetchNews(category) {
   try {

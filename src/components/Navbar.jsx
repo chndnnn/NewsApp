@@ -4,11 +4,11 @@ const Navbar = () => {
   let nav = useNavigate();
   let location = useLocation();
   return (
-    <header className="h-14 w-[100%] bg-black rounded text-white flex justify-between items-center px-5">
+    <header className="md:h-14 h-16  w-[100%] bg-black md:rounded rounded-lg text-white md:flex justify-between items-center px-2 md:px-5">
       <div>
-        <h2>निकिता समाचार</h2>
+        <h2 className="text-2xl">निकिता समाचार</h2>
       </div>
-      <div className="flex gap-10">
+      <div className="flex justify-between md:gap-10">
         <span
           onClick={() => nav("/")}
           className={`hover:scale-110 cursor-pointer hover:text-red-500 ${
