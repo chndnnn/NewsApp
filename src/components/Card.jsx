@@ -16,7 +16,7 @@ const Card = ({ data }) => {
     <a href={data.url} target="_blank">
       <div className="w-full  flex gap-2 m-1 shadow-lg rounded p-2">
         <div className="w-[30%] h-[full]  flex items-center ">
-          <img src={data.urlToImage} className="rounded h-full" alt="" />
+          <img src={data.image} className="rounded h-full" alt="" />
         </div>
         <div className="w-[70%] flex flex-col justify-between h-[full]">
           <div>
@@ -29,13 +29,16 @@ const Card = ({ data }) => {
           </div>
           <div className="flex gap-3">
             <span>
-              <b>Source:</b> {data.source.name}
+              <span className="text-red-400">
+                <b>Source:</b>
+              </span>{" "}
+              {data.source.name}
             </span>
             <span>
-              <b>Author:</b> {data.author}
-            </span>
-            <span>
-              <b>PublishedAt:</b> {data.publishedAt}
+              <span className="text-red-400">
+                <b>PublishedAt:</b>
+              </span>{" "}
+              {data.publishedAt}
             </span>
           </div>
         </div>

@@ -4,9 +4,9 @@ const Navbar = () => {
   let nav = useNavigate();
   let location = useLocation();
   return (
-    <div className="h-14 w-[100%] bg-black rounded text-white flex justify-between items-center px-5">
+    <header className="h-14 w-[100%] bg-black rounded text-white flex justify-between items-center px-5">
       <div>
-        <h2>News Reporter</h2>
+        <h2>निकिता समाचार</h2>
       </div>
       <div className="flex gap-10">
         <span
@@ -15,7 +15,7 @@ const Navbar = () => {
             location.pathname === "/" && "text-red-500 font-bold"
           }`}
         >
-          Home
+          मुख्य पृष्ठ {/* Home */}
         </span>
         <span
           onClick={() => nav("/sports")}
@@ -23,7 +23,7 @@ const Navbar = () => {
             location.pathname === "/sports" && "text-red-500 font-bold"
           }`}
         >
-          Sports
+          खेल {/* Sports */}
         </span>
         <span
           onClick={() => nav("/entertainment")}
@@ -31,7 +31,7 @@ const Navbar = () => {
             location.pathname === "/entertainment" && "text-red-500 font-bold"
           }`}
         >
-          Entertainment
+          मनोरंजन {/* Entertainment */}
         </span>
         <span
           onClick={() => nav("/bussiness")}
@@ -39,7 +39,7 @@ const Navbar = () => {
             location.pathname === "/bussiness" && "text-red-500 font-bold"
           }`}
         >
-          Bussiness
+          व्यवसाय {/* Business */}
         </span>
         <span
           onClick={() => nav("/health")}
@@ -47,10 +47,10 @@ const Navbar = () => {
             location.pathname === "/health" && "text-red-500 font-bold"
           }`}
         >
-          Health
+          स्वास्थ्य {/* Health */}
         </span>
       </div>
-    </div>
+    </header>
   );
 };
 

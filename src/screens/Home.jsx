@@ -1,31 +1,36 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { fetchNews } from "./../helper/fetchApiHelper";
+import { useQuery } from "@tanstack/react-query";
 import Card from "../components/Card";
 
 const Home = () => {
-  const apiKey = "0a11b709d5434cb48d2c9b6a68b7da2c";
+  // let [newsData, setNewsData] = useState();
 
-  let [newsData, setNewsData] = useState();
+  // useEffect(() => {
+  //   fetchNews();
+  // }, []);
 
-  useEffect(() => {
-    fetchNews();
-  }, []);
+  const { data } = useQuery({
+    queryKey: ["Home"],
+    queryFn: () => fetchNews(),
+    gcTime: 7200000,
+    staleTime: 7200000,
+  });
 
-  async function fetchNews() {
-    try {
-      let data = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
-      );
-      setNewsData(data.data.articles);
+  // async function fetchNews() {
+  //   try {
+  //     let data = await axios.get(
+  //       `https://gnews.io/api/v4/top-headlines?lang=hi&country=in&max=10&apikey=ca77a13df23d97b9c6a7219f3671acd7`
+  //     );
+  //     setNewsData(data.data.articles);
 
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  //     console.log(data);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
   return (
     <div>
-      {newsData?.map((ele) => {
+      {data?.map((ele) => {
         return (
           <div className="p-1 px-7 ">
             <Card data={ele} />

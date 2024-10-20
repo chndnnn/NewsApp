@@ -3,9 +3,13 @@ import Navbar from "../components/Navbar";
 
 const LandingPage = () => {
   return (
-    <div>
-      <Navbar />
-      <Outlet />
+    <div className="border">
+      <div className="fixed w-full">
+        <Navbar />
+      </div>
+      <div className="mt-14">
+        <Outlet />
+      </div>
     </div>
   );
 };

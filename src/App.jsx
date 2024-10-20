@@ -5,6 +5,7 @@ import Entertainment from "./screens/Entertainment";
 import Bussiness from "./screens/Bussiness";
 import LandingPage from "./screens/LandingPage";
 import Health from "./screens/Health";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const router = createBrowserRouter([
   {
@@ -36,10 +37,13 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const queryClient = new QueryClient()
   return (
     <>
       <div>
+      <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
+        </QueryClientProvider>
       </div>
     </>
   );
