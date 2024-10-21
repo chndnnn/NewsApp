@@ -21,7 +21,7 @@ const Bussiness = () => {
     <div>
       {data?.map((ele) => {
         return (
-          <div className="p-1 px-7 ">
+          <div className="p-1 md:px-7 ">
             <Card data={ele} />
           </div>
         );
