@@ -4,7 +4,7 @@ const Navbar = () => {
   let nav = useNavigate();
   let location = useLocation();
   return (
-    <header className="md:h-14 h-16  w-[100%] bg-black md:rounded rounded-lg text-white md:flex justify-between items-center px-2 md:px-5">
+    <header className="md:h-14 h-16  w-[100%] bg-black md:rounded rounded text-white md:flex justify-between items-center px-2 md:px-5">
       <div>
         <h2 className="text-2xl">निकिता समाचार</h2>
       </div>
